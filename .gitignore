@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+data/issue_comment.md
+# Local test outputs (optional, keep virus.svg since GHA updates it)
+.env

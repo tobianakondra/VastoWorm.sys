@@ -1,0 +1,68 @@
+name: VastoWorm Interactive Dispatcher
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  process-dispatch:
+    if: startsWith(github.event.issue.title, 'VASTO-WORM:')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Parse Action and Validate
+        id: parse_action
+        run: |
+          # Split by colon, grab second part, trim spaces
+          TITLE_ACTION=$(echo "${{ github.event.issue.title }}" | cut -d':' -f2 | xargs)
+          echo "Requested action: $TITLE_ACTION"
+          
+          # Whitelist validation
+          if [[ "$TITLE_ACTION" != "INJECT_PAYLOAD" && "$TITLE_ACTION" != "DEPLOY_ANTIVIRUS" && "$TITLE_ACTION" != "TRIGGER_MUTATION" ]]; then
+            echo "❌ ERROR: Invalid action '$TITLE_ACTION'"
+            exit 1
+          fi
+          
+          echo "action=$TITLE_ACTION" >> $GITHUB_OUTPUT
+
+      - name: Execute Cyber-Virus Core Action
+        run: |
+          node src/index.js --action="${{ steps.parse_action.outputs.action }}" --user="${{ github.event.issue.user.login }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Commit and Push Evolution
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/state.json assets/virus.svg README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "🧬 [VastoWorm] mutated by @${{ github.event.issue.user.login }} [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Post Terminal Comment and Close Issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Post terminal report comment
+          gh issue comment ${{ github.event.issue.number }} --body-file data/issue_comment.md
+          
+          # Close issue as successfully processed
+          gh issue close ${{ github.event.issue.number }} --reason "completed"

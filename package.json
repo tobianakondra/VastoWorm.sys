@@ -1,0 +1,13 @@
+{
+  "name": "vastoworm.sys",
+  "version": "1.0.0",
+  "description": "Autonomous Cyber-Virus Tamagotchi for GitHub Profiles",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test-svg": "node src/test-svg.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
