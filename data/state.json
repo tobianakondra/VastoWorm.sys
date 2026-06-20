@@ -1,7 +1,7 @@
 {
   "infectionRate": 16,
-  "integrity": 44.5,
-  "cpuLoad": 18,
+  "integrity": 43,
+  "cpuLoad": 12,
   "defense": 14,
   "stage": "MUTATING",
   "history": [
@@ -11,5 +11,5 @@
     "[11:56] Replication cycle: +12% integrity, +2.5% spread.",
     "[12:06] Replication cycle: +24% integrity, +5.0% spread."
   ],
-  "lastUpdated": "2026-06-20T00:11:05.020Z"
+  "lastUpdated": "2026-06-20T05:16:49.346Z"
 }
