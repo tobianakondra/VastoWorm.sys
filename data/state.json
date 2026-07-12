@@ -1,15 +1,15 @@
 {
-  "infectionRate": 18.5,
-  "integrity": 10,
-  "cpuLoad": 11,
+  "infectionRate": 21,
+  "integrity": 22,
+  "cpuLoad": 13,
   "defense": 14,
   "stage": "MUTATING",
   "history": [
-    "[11:33] Payload injected by @cyber_test_hacker. Spread +6.0%",
     "[11:56] Replication cycle: +12% integrity, +2.5% spread.",
     "[12:06] Replication cycle: +24% integrity, +5.0% spread.",
     "[14:23] WARNING: Core integrity under 40%.",
-    "[22:51] Replication cycle: +12% integrity, +2.5% spread."
+    "[22:51] Replication cycle: +12% integrity, +2.5% spread.",
+    "[22:52] Replication cycle: +12% integrity, +2.5% spread."
   ],
-  "lastUpdated": "2026-07-12T21:53:09.490Z"
+  "lastUpdated": "2026-07-12T22:52:09.359Z"
 }
