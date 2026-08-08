@@ -1,15 +1,15 @@
 {
-  "infectionRate": 53.5,
+  "infectionRate": 56,
   "integrity": 100,
-  "cpuLoad": 14,
+  "cpuLoad": 17,
   "defense": 14,
   "stage": "OVERLORD",
   "history": [
-    "[23:35] Replication cycle: +12% integrity, +2.5% spread.",
     "[05:49] Replication cycle: +12% integrity, +2.5% spread.",
     "[07:52] Replication cycle: +12% integrity, +2.5% spread.",
     "[08:43] Replication cycle: +12% integrity, +2.5% spread.",
-    "[09:39] Replication cycle: +12% integrity, +2.5% spread."
+    "[09:39] Replication cycle: +12% integrity, +2.5% spread.",
+    "[10:35] Replication cycle: +12% integrity, +2.5% spread."
   ],
-  "lastUpdated": "2026-08-08T09:39:40.056Z"
+  "lastUpdated": "2026-08-08T10:35:04.614Z"
 }
