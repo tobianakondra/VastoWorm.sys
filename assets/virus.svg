@@ -92,13 +92,13 @@
         GLOBAL INFECTION RATE
       </text>
       <text x="260" y="10" fill="#ff0055" font-family="'Share Tech Mono', monospace" font-size="12" font-weight="bold" text-anchor="end" class="neon-text">
-        83.5%
+        86.0%
       </text>
       <g transform="translate(0, 18)">
         <!-- Background track -->
         <rect x="0" y="0" width="260" height="6" fill="#1a1c24" rx="3" />
         <!-- Filled bar -->
-        <rect x="0" y="0" width="217.1" height="6" fill="#ff0055" rx="3" filter="url(#glow-red)" />
+        <rect x="0" y="0" width="223.6" height="6" fill="#ff0055" rx="3" filter="url(#glow-red)" />
       </g>
     </g>
 
@@ -121,14 +121,14 @@
         HOST CPU UTILIZATION
       </text>
       <text x="260" y="10" fill="#00f0ff" font-family="'Share Tech Mono', monospace" font-size="12" font-weight="bold" text-anchor="end">
-        11%
+        18%
       </text>
       <g transform="translate(0, 18)">
         <!-- Pulse graph line simulation -->
         <rect x="0" y="0" width="260" height="25" fill="#16171f" rx="3" />
         <path d="M 5 15 L 40 15 L 50 5 L 60 20 L 70 12 L 100 12 L 110 2 L 120 23 L 130 10 L 160 10 L 170 20 L 180 5 L 190 15 L 255 15" 
               fill="none" stroke="#00f0ff" stroke-width="1.5">
-          <animate attributeName="stroke-dasharray" values="300;0;300" dur="5.45s" repeatCount="indefinite" />
+          <animate attributeName="stroke-dasharray" values="300;0;300" dur="5.1s" repeatCount="indefinite" />
         </path>
       </g>
     </g>
@@ -180,8 +180,10 @@
            <animateMotion dur="3s" repeatCount="indefinite" path="M 540 100 L 650 160" />
          </circle>
     
-      <line x1="650" y1="160" x2="730" y2="120" stroke="rgba(0,240,255,0.15)" stroke-width="1" stroke-dasharray="none" />
-      
+      <line x1="650" y1="160" x2="730" y2="120" stroke="rgba(255,0,85,0.7)" stroke-width="1.5" stroke-dasharray="4 4" />
+      <circle r="2" fill="#ff0055">
+           <animateMotion dur="3s" repeatCount="indefinite" path="M 650 160 L 730 120" />
+         </circle>
     
       <line x1="730" y1="120" x2="750" y2="240" stroke="rgba(0,240,255,0.15)" stroke-width="1" stroke-dasharray="none" />
       
@@ -201,8 +203,10 @@
            <animateMotion dur="3s" repeatCount="indefinite" path="M 580 240 L 650 160" />
          </circle>
     
-      <line x1="450" y1="120" x2="730" y2="120" stroke="rgba(0,240,255,0.15)" stroke-width="1" stroke-dasharray="none" />
-      
+      <line x1="450" y1="120" x2="730" y2="120" stroke="rgba(255,0,85,0.7)" stroke-width="1.5" stroke-dasharray="4 4" />
+      <circle r="2" fill="#ff0055">
+           <animateMotion dur="3s" repeatCount="indefinite" path="M 450 120 L 730 120" />
+         </circle>
     
       <line x1="500" y1="230" x2="750" y2="240" stroke="rgba(0,240,255,0.15)" stroke-width="1" stroke-dasharray="none" />
       
@@ -299,9 +303,12 @@
       </g>
     
       <g>
-        
-        <circle cx="730" cy="120" r="3" fill="#00f0ff" filter="url(#glow-JP)" />
-        <text x="730" y="108" fill="#00f0ff" font-family="'Share Tech Mono', monospace" font-size="9" text-anchor="middle" letter-spacing="1">
+        <circle cx="730" cy="120" r="5" fill="none" stroke="#ff0055" stroke-width="1.5">
+           <animate attributeName="r" values="5;12;5" dur="2s" repeatCount="indefinite" />
+           <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
+         </circle>
+        <circle cx="730" cy="120" r="5" fill="#ff0055" filter="url(#glow-JP)" />
+        <text x="730" y="108" fill="#ff0055" font-family="'Share Tech Mono', monospace" font-size="9" text-anchor="middle" letter-spacing="1">
           JP-TKY
         </text>
         <filter id="glow-JP">
@@ -351,11 +358,11 @@
     </rect>
 
     <text x="35" y="335" fill="#00ff66" font-family="'Share Tech Mono', monospace" font-size="11" opacity="0.9">
-      &gt; [07:56] Replication cycle: +12% integrity, +2.5% spread.
-    </text><text x="35" y="353" fill="#00ff66" font-family="'Share Tech Mono', monospace" font-size="11" opacity="0.9">
       &gt; [08:51] Replication cycle: +12% integrity, +2.5% spread.
-    </text><text x="35" y="371" fill="#00ff66" font-family="'Share Tech Mono', monospace" font-size="11" opacity="0.9">
+    </text><text x="35" y="353" fill="#00ff66" font-family="'Share Tech Mono', monospace" font-size="11" opacity="0.9">
       &gt; [09:40] Replication cycle: +12% integrity, +2.5% spread.
+    </text><text x="35" y="371" fill="#00ff66" font-family="'Share Tech Mono', monospace" font-size="11" opacity="0.9">
+      &gt; [10:36] Replication cycle: +12% integrity, +2.5% spread.
     </text>
   </g>
 </svg>
