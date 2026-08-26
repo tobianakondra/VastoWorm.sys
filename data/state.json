@@ -1,7 +1,7 @@
 {
   "infectionRate": 100,
-  "integrity": 100,
-  "cpuLoad": 15,
+  "integrity": 98.5,
+  "cpuLoad": 17,
   "defense": 14,
   "stage": "SENTIENT",
   "history": [
@@ -11,5 +11,5 @@
     "[22:28] Replication cycle: +12% integrity, +2.5% spread.",
     "[23:25] Replication cycle: +12% integrity, +2.5% spread."
   ],
-  "lastUpdated": "2026-08-25T23:25:48.885Z"
+  "lastUpdated": "2026-08-26T01:23:34.613Z"
 }
